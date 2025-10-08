@@ -1,24 +1,21 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-struct Mahasiswa
-{
-    string nama;
-    string NIM;
-};
+//prototype prosedur
 
-int main()
-{
-    Mahasiswa mhs;
-    // mhs.nama = "Sinta";
-    // mhs.NIM = "103112430047";
+void tulis(int x);
 
-    cout << "Nama : ";
-    getline(cin, mhs.nama);
-    cout << "NIM : ";
-    cin >> mhs.NIM;
+int main(){
+    int jum;
+    cout << "Jumlah baris kata = ";
+    cin >> jum;
+    tulis(jum);
+    return 0;
+}
 
-    cout << "Nama : " << mhs.nama << endl
-         << "NIM : " << mhs.NIM;
+//Badan Prosedur
+void tulis(int x){
+    for (int i = 0; i < x; i++){
+        cout << "Baris ke-" << i + 1 << endl;
+    }
 }
